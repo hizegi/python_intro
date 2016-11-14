@@ -155,6 +155,8 @@ GA PROFILES EXERCISE:
 - Which are all the unique locations that projects have come from?
 - How many are from each location?
 
+#### Starter Code:
+
 ```
 from bs4 import BeautifulSoup
 from urllib import urlopen
