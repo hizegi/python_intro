@@ -1,5 +1,8 @@
 # Web Scraping with Python
 
+
++![python](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)
+
 ## What is web scraping? (5 mins)
 Web scraping is a technique for extracting large amounts of data from websites' source code (HTML). This data can be saved to a locally or to a database in table format.
 
