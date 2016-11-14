@@ -18,11 +18,18 @@ Web scraping is a technique for extracting large amounts of data from websites' 
 ## Intro to Python (30 mins)
 [Python 2x Documentation](https://docs.python.org/2/)
 
-Q: Why is Python the language of choice for data scientists?
-- Python is an interpreted, dynamically-typed language with a precise and efficient syntax.
-- Python has a good REPL and new modules can be explored from the REPL with dir() and docstrings.
-- Strong, core libraries (ie. NumPy, SciPy, pandas, matplotlib, IPython)
-- Data analysis and modeling, and data manipulation
+Q: Why Python?
+- Python was implemented in 1989 in the Netherlands with the core philosophy that:
+  - Beautiful is better than ugly
+  - Explicit is better than implicit
+  - Simple is better than complex
+  - Complex is better than complicated
+  - Readability counts
+- Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.
+- Python is an accessible language for new programmers, with easy to learn syntax
+- Open source modules and big libraries hook very easily into the C language. Python is a layer on top of C.
+- As a multipurpose language, it can be used for small, big, online, offline projects, and are largely used in web development, simple scripting, and data analysis
+- So, Python is *less verbose* and allows for *faster development cycles*
 
 [Source: Quora](https://www.quora.com/Why-is-Python-a-language-of-choice-for-data-scientists)
 
