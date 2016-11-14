@@ -44,6 +44,10 @@ $ python -V
 Homebrew installs Setuptools and pip for you.
 pip is a package management system for easily installing and managing Python packages
 
+#### urllib module
+
+[urllib Documentation](https://docs.python.org/2/library/urllib.html)
+
 #### Beautiful Soup Library
 Beautiful Soup is a Python library for pulling data out of HTML and XML files.
 
@@ -51,6 +55,8 @@ Beautiful Soup is a Python library for pulling data out of HTML and XML files.
 $ pip install beautifulsoup4
 -> Successfully installed beautifulsoup4-4.5.1
 ```
+
+[BeautifulSoup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 
 ## Python Data Structures:
 Run `python` in terminal for python REPL
@@ -89,7 +95,7 @@ a | b # Union
 ```
 galaxies = ["andromeda", "triangulum", "centaurus A", "bode's"]
 ```
-#### accessing and slicing:
+#### accessing and slicing
 ```
 galaxies[0]         # returns "andromeda"
 galaxies[1:3]       # returns ['triangulum', 'centaurus A']
@@ -98,12 +104,13 @@ galaxies[:2]        # returns ['andromeda', 'triangulum']
 galaxies[2:-1]      # returns ['centaurus A']
 ```
 
-#### length:
+#### length
 ```
 len(galaxies)       # returns 4
 ```
 
-#### Writing Functions
+#### Python functions
+** Indentation and syntax MATTER! **
 ```
 def say_hello(name):
     print "Hello " + name
@@ -111,9 +118,9 @@ def say_hello(name):
 # invoke the function:
 say_hello("Mr. Robot")
 ```
-** Indentation and syntax matter!
 
-#### Writing for loops for lists
+
+#### for loops
 ```
 junk_drawer = ['expired coupon', 'loose change', 'rubber band', 'lint']
 for x in junk_drawer:
@@ -121,7 +128,26 @@ for x in junk_drawer:
 
 ```
 
+#### if statements
+
+```
+numbers = [1,2,3,4,5,6]
+for number in numbers:
+    if number % 2 == 0:
+        print number
+    else:
+        print "odd!"
+
+```
+
 ### Let's do some web scraping! (1 hr)
+
+GA PROFILES EXERCISE:
+
+- Find the first project in New York City
+- Find all project titles in New York City
+- Which are all the unique locations that projects have come from?
+- How many are from each location?
 
 ```
 from bs4 import BeautifulSoup
@@ -129,7 +155,24 @@ from urllib import urlopen
 
 url = 'https://gallery.generalassemb.ly'
 page_source = urlopen(url).read()
-soup = BeautifulSoup(page_source)
-projects = soup.find_all('li', class_='projects')
+soup = BeautifulSoup(page_source, "html.parser")
+soup
+```
 
+### Navigating soup
+```
+soup.title
+-> <title>GA Gallery</title>
+
+soup.title.string
+-> u'GA Gallery'
+
+soup.p
+-> <p>ite-sized learning for all</p>
+
+soup.find_all('a')
+-> [<a href="/"><h2 class="brand">,
+<a href="/login">Login</a>,
+<a class="button small secondary href="/auth/generassembly">Login</a",
+...]
 ```
