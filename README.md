@@ -1,6 +1,6 @@
 # Web Scraping with Python
 
-## What is web scraping?
+## What is web scraping? (5 mins)
 Web scraping is a technique for extracting large amounts of data from websites' source code (HTML). This data can be saved to a locally or to a database in table format.
 
 1. Retrieve HTML data from a domain name
@@ -15,7 +15,7 @@ Web scraping is a technique for extracting large amounts of data from websites' 
     - www.nytimes.com/robots.txt
     - www.generalassemb.ly/robots.txt
 
-## Intro to Python
+## Intro to Python (30 mins)
 [Python 2x Documentation](https://docs.python.org/2/)
 
 Q: Why is Python the language of choice for data scientists?
@@ -52,7 +52,76 @@ $ pip install beautifulsoup4
 -> Successfully installed beautifulsoup4-4.5.1
 ```
 
-### Let's do it!
+## Python Data Structures:
+Run `python` in terminal for python REPL
+
+#### Lists
+
+```
+my_list = [1, 2, 3, 4, 5, "a"]
+```
+
+#### Tuples
+Tuples are faster and consume less memory than lists.
+```
+t = (1, 2, 3, 4, 5, "a")
+```
+
+#### Dictionaries
+```
+dict = {"a":1, "b":2, "c":3}
+```
+
+#### Strings
+```
+favorite_food = "tacos"
+```
+
+#### Set + Frozen Set
+```
+a = set([1, 2, 3, 4])
+b = set([3, 4, 5, 6])
+a | b # Union
+-> {1, 2, 3, 4, 5, 6}
+```
+
+### List Manipulations
+```
+galaxies = ["andromeda", "triangulum", "centaurus A", "bode's"]
+```
+#### accessing and slicing:
+```
+galaxies[0]         # returns "andromeda"
+galaxies[1:3]       # returns ['triangulum', 'centaurus A']
+galaxies[2:]        # returns ['centaurus A', "bode's"]
+galaxies[:2]        # returns ['andromeda', 'triangulum']
+galaxies[2:-1]      # returns ['centaurus A']
+```
+
+#### length:
+```
+len(galaxies)       # returns 4
+```
+
+#### Writing Functions
+```
+def say_hello(name):
+    print "Hello " + name
+
+# invoke the function:
+say_hello("Mr. Robot")
+```
+** Indentation and syntax matter!
+
+#### Writing for loops for lists
+```
+junk_drawer = ['expired coupon', 'loose change', 'rubber band', 'lint']
+for x in junk_drawer:
+    print x
+
+```
+
+### Let's do some web scraping! (1 hr)
 
 ```
 from bs4 import BeautifulSoup
