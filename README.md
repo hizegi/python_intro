@@ -1,7 +1,5 @@
 # Web Scraping with Python
 
-![python](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)
-
 ## What is web scraping? (5 mins)
 Web scraping is a technique for extracting large amounts of data from websites' source code (HTML). This data can be saved to a locally or to a database in table format.
 
@@ -52,6 +50,12 @@ pip is a package management system for easily installing and managing Python pac
 
 #### Beautiful Soup Library
 Beautiful Soup is a Python library for pulling data out of HTML and XML files.
+
+Beautiful Soup transforms a complex HTML document into a complex tree of Python objects:
+- Tag
+- NavigableString
+- BeautifulSoup
+- Comment
 
 ```
 $ pip install beautifulsoup4
@@ -177,4 +181,42 @@ soup.find_all('a')
 <a href="/login">Login</a>,
 <a class="button small secondary href="/auth/generassembly">Login</a",
 ...]
+```
+
+### More BeautifulSoup navigation methods
+- `.children`
+- `.contents`
+- `.descendants`
+- `.string`
+- `.parent` / `.parents`
+- `.next_sibling` / `.previous_sibling`
+
+### Filters
+
+#### String
+```
+soup.find_all('b')
+# finds all the <b> tags in the document
+```
+
+#### Regular Expression
+```
+import re
+for tag in soup.find_all(re.compile("^b")):
+    print(tag.name)
+# body
+# b
+```
+
+#### Function
+#### List
+#### Keyword Arguments
+```
+soup.find_all(id='link2')
+# [<a class="sister" href="http://example.com/lacie" id="link2">Lacie</a>]
+```
+
+#### CSS Class
+```
+soup.find_all("a", class_="sister")
 ```
