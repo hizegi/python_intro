@@ -1,1 +1,66 @@
-# python_intro
+# Web Scraping with Python
+
+## What is web scraping?
+Web scraping is a technique for extracting large amounts of data from websites' source code (HTML). This data can be saved to a locally or to a database in table format.
+
+1. Retrieve HTML data from a domain name
+2. Parse the data for specific information
+3. Store the target information
+
+#### Data on the web
+
+- A lot of sites don't have APIs, but the internet is the best place for information.
+- Legal issues:
+    - www.facebook.com/robots.txt
+    - www.nytimes.com/robots.txt
+    - www.generalassemb.ly/robots.txt
+
+## Intro to Python
+[Python 2x Documentation](https://docs.python.org/2/)
+
+Q: Why is Python the language of choice for data scientists?
+- Python is an interpreted, dynamically-typed language with a precise and efficient syntax.
+- Python has a good REPL and new modules can be explored from the REPL with dir() and docstrings.
+- Strong, core libraries (ie. NumPy, SciPy, pandas, matplotlib, IPython)
+- Data analysis and modeling, and data manipulation
+
+[Source: Quora](https://www.quora.com/Why-is-Python-a-language-of-choice-for-data-scientists)
+
+## Installing Python
+The latest version of Mac OS X, El Capitan, comes with Python 2.7 installed already.
+
+#### Installing with Homebrew
+Installing Python 2.7:
+```
+$ brew install python
+```
+
+```
+$ python -V
+-> Python 2.7.10
+```
+
+#### pip
+Homebrew installs Setuptools and pip for you.
+pip is a package management system for easily installing and managing Python packages
+
+#### Beautiful Soup Library
+Beautiful Soup is a Python library for pulling data out of HTML and XML files.
+
+```
+$ pip install beautifulsoup4
+-> Successfully installed beautifulsoup4-4.5.1
+```
+
+### Let's do it!
+
+```
+from bs4 import BeautifulSoup
+from urllib import urlopen
+
+url = 'https://gallery.generalassemb.ly'
+page_source = urlopen(url).read()
+soup = BeautifulSoup(page_source)
+projects = soup.find_all('li', class_='projects')
+
+```
