@@ -29,18 +29,20 @@ Q: Why Python?
   - Complex is better than complicated
   - Readability counts
 - Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.
+- Python is whitespace deliminated.
 - Python is an accessible language for new programmers, with easy to learn syntax
 - Open source modules and big libraries hook very easily into the C language. Python is a layer on top of C.
 - As a multipurpose language, it can be used for small, big, online, offline projects, and are largely used in web development, simple scripting, and data analysis
 - So, Python is *less verbose* and allows for *faster development cycles*
 
-[Source: Quora](https://www.quora.com/Why-is-Python-a-language-of-choice-for-data-scientists)
+[Python + Data: Quora](https://www.quora.com/Why-is-Python-a-language-of-choice-for-data-scientists)
 
 ## Installing Python
 The latest version of Mac OS X, El Capitan, comes with Python 2.7 installed already.
+The newest version of Python is Python3, but we will use Python 2.x.
 
 #### Installing with Homebrew
-Installing Python 2.7:
+We will be installing our own version of Python 2.7:
 ```
 $ brew install python
 ```
@@ -74,8 +76,29 @@ $ pip install beautifulsoup4
 
 [BeautifulSoup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 
-## Python Data Structures:
-Run `python` in terminal for python REPL
+## Python Data Types:
+Run `python` in terminal for python shell
+
+#### Variables + Multiple Assignments
+Python variables do not need explicit declaration. You can simple assign a value to a variable:
+
+```
+x = 1
+x = "Yams"
+x = [1,2,3]
+
+a = b = c = 1
+```
+
+Python has 5 standard data types:
+
+#### Numbers (int, long, float, complex)
+```
+int_num = -9888
+long_num = 0xDEFABCECBDAECBFBAEl
+float_num = 0.0
+complex_num = .876j
+```
 
 #### Lists
 
@@ -85,26 +108,31 @@ my_list = [1, 2, 3, 4, 5, "a"]
 
 #### Tuples
 Tuples are faster and consume less memory than lists.
+Tuples are immutable (think: "Read Only")
+
 ```
 t = (1, 2, 3, 4, 5, "a")
 ```
 
 #### Dictionaries
 ```
-dict = {"a":1, "b":2, "c":3}
+dict = {}
+dict['pie'] = "apple"
+dict[2] = "two"
+
+my_dict = {"a":1, "b":2, "c":3}
+
+dict.keys()     # prints all keys
+dict.values()   # prints all values
 ```
 
 #### Strings
 ```
 favorite_food = "tacos"
-```
-
-#### Set + Frozen Set
-```
-a = set([1, 2, 3, 4])
-b = set([3, 4, 5, 6])
-a | b # Union
--> {1, 2, 3, 4, 5, 6}
+print favorite_food         # returns "tacos"
+print favorite_food[0]      # returns "t"
+print favorite_food[2:5]    # returns "cos"
+print favorite_food * 2     # returns "tacostacos"
 ```
 
 ### List Manipulations
@@ -120,9 +148,23 @@ galaxies[:2]        # returns ['andromeda', 'triangulum']
 galaxies[2:-1]      # returns ['centaurus A']
 ```
 
+### :neckbeard: You Do!
+
+```
+fresh_prince = ["Will Smith", "Philip", "Carlton", "Hilary", "Jazz", "Geoffrey"]
+```
+
+Using the `fresh_prince` list, access:
+
+1. "Philip"
+2. ["Hilary", "Jazz", "Geoffrey"]
+3. ["Will Smith", "Philip", "Carlton"]
+4. ["Philip", "Carlton", "Hilary", "Jazz", "Geoffrey"]
+
+
 #### length
 ```
-len(galaxies)       # returns 4
+len(fresh_prince)       # returns 6
 ```
 
 #### Python functions
@@ -155,6 +197,26 @@ for number in numbers:
         print "odd!"
 
 ```
+
+### :neckbeard: You Do!
+
+Exercise 2: Create a calculator function:
+
+1. `bad_calc` will take 2 arguments, `num1` and `num2`
+2. If they're both even, print the product (multiply them)
+3. If they're both odd, print the sum (add them)
+4. If they're neither, print the numbers
+
+Exercise 3: Zpelling
+```
+zpecial = ["zoup", "soccer", "zkillz", "zelf", "javascript"]
+```
+
+1. Write a for loop to loop through `zpecial`.
+2. If the word contains a 'z', print the new word.
+3. If there are no 'z's, print "not zpecial".
+
+
 
 ### Let's do some web scraping! (1 hr)
 
