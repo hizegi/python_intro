@@ -1,13 +1,15 @@
 # Web Scraping with Python
 
++![python](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)
+
+
 ## Lesson Objectives
 - Learn about Python as a programming language
 - Practice writing Python code (data types)
+- Understand the process of web scraping
 - Use BeautifulSoup library to scrape GA Profiles
 - Stretch: Scrape weather info + plot a graph
 
-
-+![python](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)
 
 ## What is web scraping? (5 mins)
 Web scraping is a technique for extracting large amounts of data from websites' source code (HTML). This data can be saved to a locally or to a database in table format.
