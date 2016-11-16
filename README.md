@@ -1,5 +1,11 @@
 # Web Scraping with Python
 
+## Lesson Objectives
+- Learn about Python as a programming language
+- Practice writing Python code (data types)
+- Use BeautifulSoup library to scrape GA Profiles
+- Stretch: Scrape weather info + plot a graph
+
 
 +![python](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)
 
