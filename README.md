@@ -168,6 +168,8 @@ Using the `fresh_prince` list, access:
 2. ["Hilary", "Jazz", "Geoffrey"]
 3. ["Will Smith", "Philip", "Carlton"]
 4. ["Philip", "Carlton", "Hilary", "Jazz", "Geoffrey"]
+5. Remove "Geoffrey" (hint: `.pop()`?)
+6. Add "Nicky" to the end (hint: `.append()`?)
 
 
 #### length
