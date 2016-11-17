@@ -304,3 +304,6 @@ soup.find_all(id='link2')
 ```
 soup.find_all("a", class_="sister")
 ```
+
+### Writing CSV
+[Python Docs on CSV](https://docs.python.org/2/library/csv.html)
